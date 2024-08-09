@@ -1,172 +1,128 @@
-\thispagestyle{empty}
-%-------------------------------------------------------------
 
-\section*{Start}
+# 求职简历
+女 ｜ 2000/08/01 ｜ 产品经理 ｜ 北京 | 3年工作经验
+icon:phone 13425182004 ｜ icon:email qiumengyi@kuaishou.com｜ icon:wechat codecvresume@qq.com
 
-\simpleheader{headercolour}{Jack}{Sparrow}{Captain}{white}
-
-
-
-%------------------------------------------------
-
-% this has to be here so the paracols starts..
-\subsection*{}
-\vspace{4em}
-
-\setlength{\columnsep}{1.5cm}
-\columnratio{0.23}[0.75]
-\begin{paracol}{2}
-\hbadness5000
-%\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
-
-\paracolbackgroundoptions
-
-% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+* * *
 
 
-\footnotesize
-{\setasidefontcolour
-\flushright
-\begin{center}
-    \roundpic{jack.jpg}
-\end{center}
+## icon:work 工作经历
 
-\bg{cvgreen}{white}{About me}\\[0.5em]
+### 快手        项目经理
 
-{\footnotesize
-\lorem\lorem\lorem}
-\bigskip
+:::
+**2018/06 - 2021/09**
 
-\bg{cvgreen}{white}{personal} \\[0.5em]
-Jack Sparrow
+::: end
 
-nationality: English 
+::: end
+::: start
+#### 内容
 
-1690
+:::
+通过对市场和用户需求的深入调研，我在产品设计阶段提出了一系列用户友好、功能丰富的设计方案。基于需求分析，与团队一起制定了产品的整体框架、功能模块、流程设计，并根据不同用户群体的需求，进行了差异化设计。
 
-\bigskip
+::: end
+::: start
+#### 成绩
 
-\bg{cvgreen}{white}{Areas of specialization} \\[0.5em]
+:::
+1. 用户数量：在产品上线后的第一个季度，用户数量增长了80%。
 
-Privateering ~•~ Bucaneering ~•~ Parler ~•~ Rum
-
-\bigskip
+2. 用户留存率：在产品上线后的第二个季度，用户留存率提高了20%。
 
 
+::: end
+::: start
+&nbsp;
+:::
+::: start
+### 亚马逊     项目经理
 
-\bigskip
+:::
+**2015/06 - 2028/05**
 
-\bg{cvgreen}{white}{Interests}\\[0.5em]
+::: end
 
-\lorem
-\bigskip
+::: end
+::: start
+#### 内容
 
-\bg{cvgreen}{white}{Interests}\\[0.5em]
+:::
+负责亚马逊电商平台的搜索和推荐功能，带领跨部门团队制定并执行了一系列改进计划，提高了搜索和推荐的效果和准确性。
 
-\texttt{R} ~/~ \texttt{Android} ~/~ \texttt{Linux}
+::: end
+::: start
+#### 成绩
 
-\texttt{R} ~/~ \texttt{Android} ~/~ \texttt{Linux}
+:::
+1. 用户留存率：在产品上线后的第二个季度，用户留存率提高了20%。
 
-\texttt{R} ~/~ \texttt{Android} ~/~ \texttt{Linux}
-
-\vspace{4em}
-
-\infobubble{\faAt}{cvgreen}{white}{jack@sparrow.org}
-\infobubble{\faTwitter}{cvgreen}{white}{@sparrow}
-\infobubble{\faFacebook}{cvgreen}{white}{Jack Sparrow}
-\infobubble{\faGithub}{cvgreen}{white}{sparrow}
-
-\phantom{turn the page}
-
-\phantom{turn the page}
-}
-%-----------------------------------------------------------
-\switchcolumn
-
-\small
-\section*{Short Resumé}
-
-\begin{tabular}{r| p{0.5\textwidth} c}
-    \cvevent{2018--2021}{Captain of the Black Pearl}{Lead}{East Indies \color{cvred}}{Finally got the goddamn ship back.\lorem\lorem\lorem}{disney.png} \\
-    \cvevent{2016--2017}{Captain of the Black Pearl}{Lead}{Tortuga \color{cvred}}{Found a secret treasure, lost the ship. \lorem\lorem}{medal.jpeg}
-\end{tabular}
-\vspace{3em}
-
-\begin{minipage}[t]{0.35\textwidth}
-\section*{Degrees}
-\begin{tabular}{r p{0.6\textwidth} c}
-    \cvdegree{1710}{Captain}{Certified}{Tortuga Uni \color{headerblue}}{}{disney.png} \\
-    \cvdegree{1715}{Bucaneering}{M.A.}{London \color{headerblue}}{}{medal.jpeg} \\
-    \cvdegree{1720}{Bucaneering}{B.A.}{London \color{headerblue}}{}{medal.jpeg}
-\end{tabular}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.3\textwidth}
-\section*{Programming}
-\begin{tabular}{r @{\hspace{0.5em}}l}
-     \bg{skilllabelcolour}{iconcolour}{html, css} &  \barrule{0.4}{0.5em}{cvpurple}\\
-     \bg{skilllabelcolour}{iconcolour}{\LaTeX} & \barrule{0.55}{0.5em}{cvgreen} \\
-     \bg{skilllabelcolour}{iconcolour}{python} & \barrule{0.5}{0.5em}{cvpurple} \\
-     \bg{skilllabelcolour}{iconcolour}{R} & \barrule{0.25}{0.5em}{cvpurple} \\
-     \bg{skilllabelcolour}{iconcolour}{javascript} & \barrule{0.1}{0.5em}{cvpurple} \\
-\end{tabular}
-\end{minipage}
-
-\section*{Curriculum}
-\begin{tabular}{r| p{0.5\textwidth} c}
-    \cvevent{2018--2021}{Captain of the Black Pearl}{Lead}{East Indies \color{cvred}}{Finally got the goddamn ship back. \lorem}{disney.png} \\
-    \cvevent{2019}{Freelance Pirate}{Bucaneering}{Tortuga \color{cvred}}{This and that. The usual, aye?  \lorem}{medal.jpeg} \\
-\end{tabular}
-\vspace{3em}
-
-\begin{minipage}[t]{0.3\textwidth}
-\section*{Certificates \& Grants}
-\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.55\textwidth}}
-    1708 & Captain's Certificates \\
-    1710 & Travel grant \\
-    1715--1716 & Grant from the Pirate's Company
-\end{tabular}
-\bigskip
-
-\section*{Languages}
-\begin{tabular}{l | ll}
-\textbf{English} & C2 & {\phantom{x}\footnotesize mother tongue} \\
-\textbf{French} & C2 & \pictofraction{\faCircle}{cvgreen}{3}{black!30}{1}{\tiny} \\
-\textbf{Spanish} & C2 & \pictofraction{\faCircle}{cvgreen}{1}{black!30}{3}{\tiny} \\
-\textbf{Italian} & C2 & \pictofraction{\faCircle}{cvgreen}{3}{black!30}{1}{\tiny}
-\end{tabular}
-\bigskip
-
-\end{minipage}\hfill
-\begin{minipage}[t]{0.3\textwidth}
-\section*{Publications}
-\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.7\textwidth}}
-    1729 & \emph{How I almost got killed by Lady Swan}, Tortuga Printing Press. \\
-    1720 & ``Privateering for Beginners'', in: \emph{The Pragmatic Pirate} (1/1720).
-\end{tabular}
-\bigskip
-
-\section*{Talks}
-\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.6\textwidth}}
-    Nov. 1726 & ``How I lost my ship (\& and how to get it back)'', at: \emph{Annual Pirate's Conference} in Tortuga, Nov. 1726.
-\end{tabular}
-\end{minipage}
+2. 产品评价：用户对产品的评价整体上提高了30%。
 
 
+::: end
+::: start
+## icon:technology 个人技能
+
+:::
+- 熟练掌握数据分析和用户研究技能，能够利用数据指导产品决策和优化方案。
+
+- 熟悉各种产品管理工具和方法，包括市场调研、竞品分析、用户体验设计、项目管理和推广营销等。
+
+- 具有优秀的英语听说读写能力，能够流利地进行跨文化交流和团队合作。
 
 
+::: end
+::: start
+## icon:school 毕业院校
 
+:::
+::: start
+**中国矿业大学**    工商管理    硕士
 
-\vfill{} % Whitespace before final footer
+:::
+**2016/10 - 2019/12**
 
-%----------------------------------------------------------------------------------------
-%	FINAL FOOTER
-%----------------------------------------------------------------------------------------
-\setlength{\parindent}{0pt}
-\begin{minipage}[t]{\rightcolwidth}
-\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
-{\small Jack Sparrow \icon{\faEnvelopeO}{cvgreen}{} The Black Pearl \icon{\faMapMarker}{cvgreen}{} Tortuga \icon{\faPhone}{cvgreen}{} 0099/333 5647380 \newline\icon{\faAt}{cvgreen}{} \protect\url{jack@sparrow.com}
-}
-\end{center}
-\end{minipage}
+::: end
+研究生学生会主席
+::: start
+**南昌大学**    工商管理    本科
 
-\end{paracol}
+:::
+**2016/10 - 2019/12**
+
+::: end
+本科学生会主席 / 优秀毕业生代表 / 班级学习委员
+
+::: end
+::: start
+## icon:trophy 个人荣誉
+
+:::
+优秀毕业生，清华大学，2018
+最佳产品经理实习生，谷歌，2020
+最佳产品经理，亚马逊，2021
+
+::: end
+::: start
+## icon:comment 自我评价
+
+:::
+具备用户导向、产品规划、项目管理、数据分析和团队协作的能力。善于思考和解决问题，能够根据市场和用户需求制定产品方案，并通过数据分析和团队协作实现高效的项目管理和卓越的用户体验。
+
+::: end
+::: mainEnd
+# 个人信息
+
+ - 冷熊/男/1990 
+ - 本科/北极大学计算机系 
+ - 工作年限：3年
+ - 微博：[@Easy](http://weibo.com/easy) （如果没有技术相关内容，也可以不放）
+ - 技术博客：http://old.ftqq.com ( 使用GitHub Host的Big较高  )
+ - Github：http://github.com/easychen ( 有原创repo的Github帐号会极大的提升你的个人品牌  )
+
+ - 期望职位：PHP高级程序员，应用架构师
+ - 期望薪资：税前月薪15k~20k，特别喜欢的公司可例外
+ - 期望城市：北京
+
