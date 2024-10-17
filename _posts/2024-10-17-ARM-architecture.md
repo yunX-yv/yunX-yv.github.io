@@ -17,7 +17,7 @@ pinned: true
 ## 内存类型：
 <font style="color:rgb(64, 64, 64);background-color:rgb(252, 252, 252);">ARM v8 v7 架构定义了两种互斥的内存类型。所有内存区域都配置为这两种类型中的一种，即Normal和Device，以及 Strongly Ordered。</font>
 
-![节选自《Zynq-7000-TRM》](https://cdn.nlark.com/yuque/0/2024/png/21562848/1720408836401-742f3cc5-11e7-47f4-85aa-d4e378a3e3c7.png)
+![节选自《Zynq-7000-TRM》](./pic/2024-10-17-ARM-architecture/L (1).png)
 
 ![](https://cdn.nlark.com/yuque/0/2024/png/21562848/1720422526747-6e7c3210-4262-4210-8571-553b06519292.png)
 
