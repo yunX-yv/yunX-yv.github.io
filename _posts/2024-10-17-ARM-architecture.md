@@ -3,7 +3,7 @@ layout: post
 title: ARM架构基础
 date: 20224-10-17
 author: 云萧雨霁
-tags: [ARM]
+tags: [sample]
 comments: true
 toc: true
 pinned: true
