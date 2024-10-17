@@ -21,6 +21,10 @@ pinned: true
 
 ![](https://cdn.nlark.com/yuque/0/2024/png/21562848/1720422526747-6e7c3210-4262-4210-8571-553b06519292.png)
 
+![](https://cdn.nlark.com/yuque/0/2024/png/21562848/1720422526747-6e7c3210-4262-4210-8571-553b06519292.png)
+
+![](https://cdn.nlark.com/yuque/0/2024/png/21562848/1724310626980-9cd90b6a-0ba2-4c18-b088-ecf150267c49.png?x-oss-process=image%2Fformat%2Cwebp)
+
 + <font style="color:rgb(0, 0, 0);background-color:rgb(238, 238, 238);">1、对 Strongly-ordered 存储器的写入，只有在写访问到外设或者存储器组件的时候，才算完成；</font>
 + <font style="color:rgb(0, 0, 0);background-color:rgb(238, 238, 238);">2、对 Device 存储器的写入，允许在写访问到达外设之前就完成；</font>
 
