@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ARM架构基础
-date: 20224-10-17
+date: 2024-10-17
 author: 云萧雨霁
 tags: [sample]
 comments: true
