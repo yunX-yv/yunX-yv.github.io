@@ -1,6 +1,18 @@
+---
+layout: post
+title: SPI驱动详解
+date: 2024-10-23
+author: 云萧雨霁
+tags: [ARM Linux]
+comments: true
+toc: true
+pinned: true
+
+---
+
 # spi数据结构
 
-[RK3399平台开发系列讲解（SPI子系统）4.13、SPI子系统之数据结构的解析_rk3399 有没有 qspi-CSDN博客](https://xuesong.blog.csdn.net/article/details/113824436)![](.\pic\2024-10-23-spi-driver\1718244342296-8be7f17e-ed9c-451c-b863-b4e17cee7f22.png)
+[RK3399平台开发系列讲解（SPI子系统）4.13、SPI子系统之数据结构的解析_rk3399 有没有 qspi-CSDN博客](https://xuesong.blog.csdn.net/article/details/113824436)![](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1718244342296-8be7f17e-ed9c-451c-b863-b4e17cee7f22.png)
 
 ## spi_bus_type SPI 总线
 ## spi_driver 外设驱动枚举
@@ -56,14 +68,14 @@ struct spi_device {
 [【驱动】SPI驱动分析(四)-关键API解析 - 学习，积累，成长 - 博客园](https://www.cnblogs.com/dongxb/p/17868580.html)
 
 ## SPI 匹配框架：
-![](.\pic\2024-10-23-spi-driver\1652603351165-37cfe16e-4a7a-4c63-a85a-2c3ed6c5a4a3.png)
+![](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1652603351165-37cfe16e-4a7a-4c63-a85a-2c3ed6c5a4a3.png)
 
-![画板](.\pic\2024-10-23-spi-driver\1718268362778-ab26567a-2559-47e4-a27f-bd8e9608de7a.jpeg)
+![画板](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1718268362778-ab26567a-2559-47e4-a27f-bd8e9608de7a.jpeg)
 
 ### APP 调用流程
-![](C:\Users\xiaodq\Desktop\新建文件夹\pic\2024-10-23-spi-driver\1729661536506-e2d07017-d0d8-45b3-ae7b-5b33f2408ed6.png)
+![](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1729661536506-e2d07017-d0d8-45b3-ae7b-5b33f2408ed6.png)
 
-![](C:\Users\xiaodq\Desktop\新建文件夹\pic\2024-10-23-spi-driver\1718022963517-5cb42138-921b-432b-afc1-5f38616e3c4b.png)
+![](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1718022963517-5cb42138-921b-432b-afc1-5f38616e3c4b.png)
 
 **参考：**
 
@@ -356,7 +368,7 @@ spi写-读操作
 ### SPI 传输数据管理：
 SPI 传输数据可以使用多个`spi_message` 管理多个要传输的数据`spi_transfer`。
 
-![画板](C:\Users\xiaodq\Desktop\新建文件夹\pic\2024-10-23-spi-driver\1727007072760-4a4d5c3e-663d-4e23-bf26-01a5b9e1fabb.jpeg)
+![画板](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1727007072760-4a4d5c3e-663d-4e23-bf26-01a5b9e1fabb.jpeg)
 
 ```c
 int spi_write_then_read(struct spi_device *spi,
@@ -444,14 +456,14 @@ static int __spi_sync(struct spi_device *spi, struct spi_message *message)
 
 遍历 message 发送所用 transfer。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21562848/1729663851536-de722f5b-9c7d-401c-9628-dc0916a029c4.png)
+![](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1729663851536-de722f5b-9c7d-401c-9628-dc0916a029c4.png)
 
 <font style="color:rgb(62, 67, 73);">SPI驱动器有两种类型，这里称为：</font>
 
 + **<font style="color:rgb(62, 67, 73);">Controller drivers</font>**<font style="color:rgb(62, 67, 73);"> 控制器驱动程序 :控制器可以内置于片上系统处理器中，并且通常同时支持控制器和目标角色。这些驱动程序与硬件寄存器接触，并可能使用 DMA。或者它们可以是 PIO bitbangers，只需要 GPIO 引脚。</font>
 + **<font style="color:rgb(62, 67, 73);">Protocol drivers</font>**<font style="color:rgb(62, 67, 73);"> 协议驱动程序 :它们通过控制器驱动程序传递消息，以便与 SPI 链路另一端的目标或控制器设备进行通信</font>
 
-![画板](C:\Users\xiaodq\Desktop\新建文件夹\pic\2024-10-23-spi-driver\1722511536666-e221be88-27c6-4b4c-b80b-be8261a7894b.jpeg)
+![画板](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1722511536666-e221be88-27c6-4b4c-b80b-be8261a7894b.jpeg)
 
 # spi控制器驱动
 
@@ -513,7 +525,7 @@ spi0: spi@1c05000 {
 
 **gpio 模拟 SPI 控制器：**
 
-![](C:\Users\xiaodq\Desktop\新建文件夹\pic\2024-10-23-spi-driver\1718884108019-cf7aa701-be34-4af6-a7dc-0a9d9898beb7.png)
+![](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1718884108019-cf7aa701-be34-4af6-a7dc-0a9d9898beb7.png)
 
 ## SPI 控制器层设备匹配
 SPI 设备树节点参数文档：**Linux\Documentation\devicetree\bindings\spi\spi-bus.txt**
@@ -682,21 +694,21 @@ c = spi_controller_get_devdata(ctlr);
 
 ### SPI 硬件控制器初始化
 #### SPI 中断初始化
-![](C:\Users\xiaodq\Desktop\新建文件夹\pic\2024-10-23-spi-driver\1729324742081-9fb55809-e251-45cb-9431-093d8963f111.png)
+![](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1729324742081-9fb55809-e251-45cb-9431-093d8963f111.png)
 
-![](C:\Users\xiaodq\Desktop\新建文件夹\pic\2024-10-23-spi-driver\1729324674609-60c253e2-8dcc-40d2-9e38-ccde48c5925f.png)
+![](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1729324674609-60c253e2-8dcc-40d2-9e38-ccde48c5925f.png)
 
 #### 填写必要硬件信息
-![](C:\Users\xiaodq\Desktop\新建文件夹\pic\2024-10-23-spi-driver\1729325887224-712aa6f7-34f4-4189-a9d1-5ddad4e2e058.png)
+![](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1729325887224-712aa6f7-34f4-4189-a9d1-5ddad4e2e058.png)
 
 ## SPI 传输框架
 ### 控制器驱动提供接口
 <font style="color:rgb(34, 40, 50);">Linux中使用spi_master结构体描述SPI控制器，有两套传输方法：</font>
 
-![](C:\Users\xiaodq\Desktop\新建文件夹\pic\2024-10-23-spi-driver\1729661401350-9cf711a8-d12a-4e1a-a530-172a42650b5a.png)
+![](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1729661401350-9cf711a8-d12a-4e1a-a530-172a42650b5a.png)
 
 ####  `__spi_sync`
-![](pic/84_spi_transfer_old.png)![旧控制器驱动架构](C:\Users\xiaodq\Desktop\新建文件夹\pic\2024-10-23-spi-driver\1724246410734-34161012-3a2e-499c-8a4b-10f326a913c4.png)![新控制器驱动架构](C:\Users\xiaodq\Desktop\新建文件夹\pic\2024-10-23-spi-driver\1724246417195-2a1e76c4-f7f0-4ff9-959c-3250d358bbfe.png)
+![](pic/84_spi_transfer_old.png)![旧控制器驱动架构](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1724246410734-34161012-3a2e-499c-8a4b-10f326a913c4.png)![新控制器驱动架构](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1724246417195-2a1e76c4-f7f0-4ff9-959c-3250d358bbfe.png)
 
 ## 控制器驱动解读：
 ### 设置时钟频率
@@ -737,17 +749,17 @@ static void cdns_spi_config_clock_freq(struct spi_device *spi,
 
 在 底层实现了多种设备的驱动代码，这些驱动代码在控制器驱动的实现流程上是一样的，但是对于寄存器的操作却有所不同。
 
-![](C:\Users\xiaodq\Desktop\新建文件夹\pic\2024-10-23-spi-driver\1724598769068-f34d3783-444a-4755-9130-7993160502f7.png)
+![](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1724598769068-f34d3783-444a-4755-9130-7993160502f7.png)
 
-![](C:\Users\xiaodq\Desktop\新建文件夹\pic\2024-10-23-spi-driver\1724598788883-c969eab1-4335-45df-aed2-cb066806c50e.png)
+![](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1724598788883-c969eab1-4335-45df-aed2-cb066806c50e.png)
 
 为了减少使用重复的代码，imx 在实行上将控制器的底软和控制器核心进行了分离：
 
-![画板](C:\Users\xiaodq\Desktop\新建文件夹\pic\2024-10-23-spi-driver\1724599163402-0da3a524-d890-4e4e-b92a-0fb961051a78.jpeg)
+![画板](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1724599163402-0da3a524-d890-4e4e-b92a-0fb961051a78.jpeg)
 
 控制器核心并不识别使用什么驱动，而是调用相同的接口，这些接口在 platform 中通过私有数据的方式提供到 probe，然后在 probe 中提供给 spi master 控制器。
 
-![画板](C:\Users\xiaodq\Desktop\新建文件夹\pic\2024-10-23-spi-driver\1724599759502-961d0787-3294-4873-a97d-314664d94f9d.jpeg)
+![画板](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1724599759502-961d0787-3294-4873-a97d-314664d94f9d.jpeg)
 
 ## completion
 `completion` 是内核提供的 `transfer masage` 管理接口
@@ -774,7 +786,7 @@ spidev0: spidev@0 {
 ```
 
 ## spidev 接口
-![](C:\Users\xiaodq\Desktop\新建文件夹\pic\2024-10-23-spi-driver\1724162876469-7370781f-c674-4287-b56b-a3990e8288aa.png)
+![](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1724162876469-7370781f-c674-4287-b56b-a3990e8288aa.png)
 
 ## 使用 spidev
 <font style="color:rgb(51, 51, 51);">内核提供的测试程序：</font>`<font style="color:rgb(51, 51, 51);background-color:rgb(243, 244, 244);">tools\spi\spidev_fdx.c</font>`
@@ -787,14 +799,14 @@ spidev0: spidev@0 {
 + <font style="color:rgb(51, 51, 51);">-r N：读N个字节</font>
 
 ## 源码解析：
-![画板](C:\Users\xiaodq\Desktop\新建文件夹\pic\2024-10-23-spi-driver\1723205148065-dd02daa9-0db4-4d97-ab4e-c33b19027c77.jpeg)
+![画板](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1723205148065-dd02daa9-0db4-4d97-ab4e-c33b19027c77.jpeg)
 
 ### 多个 dev 管理方式：
 spidev 每匹配成功一个，便会把 spi 设备信息保存到 spi list 中
 
-![](C:\Users\xiaodq\Desktop\新建文件夹\pic\2024-10-23-spi-driver\1724162777192-1ef5fb07-66d4-4e61-88ca-3292fa09e4ce.png)
+![](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1724162777192-1ef5fb07-66d4-4e61-88ca-3292fa09e4ce.png)
 
 ### 内核空间和用户空间数据交互
-![](C:\Users\xiaodq\Desktop\新建文件夹\pic\2024-10-23-spi-driver\1724163152910-a142d5db-f696-4e58-9dfd-af4176cd9a8e.png)
+![](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1724163152910-a142d5db-f696-4e58-9dfd-af4176cd9a8e.png)
 
-![](C:\Users\xiaodq\Desktop\新建文件夹\pic\2024-10-23-spi-driver\1724163167661-1f7dcfe3-3a32-4168-b3db-11fea8b466b6.png)
+![](https://raw.githubusercontent.com/yunX-yv/yunX-yv.github.io/master/_posts/pic/2024-10-23-spi-driver/1724163167661-1f7dcfe3-3a32-4168-b3db-11fea8b466b6.png)
