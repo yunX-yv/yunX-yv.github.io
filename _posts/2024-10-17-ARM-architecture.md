@@ -10,7 +10,7 @@ pinned: true
 
 ---
 
-[3. ARMv8 基础知识 — Armv8/armv9架构入门指南 v1.0 文档](http://hehezhou.cn/arm/03.html)
+参考：[3. ARMv8 基础知识 — Armv8/armv9架构入门指南 v1.0 文档](http://hehezhou.cn/arm/03.html)
 
 # 内存排序（Memory Ordering）：
 
